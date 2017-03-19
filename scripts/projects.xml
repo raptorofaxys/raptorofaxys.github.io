@@ -4,8 +4,8 @@
   <Content type="html">
     <![CDATA[
 <body style="background-color : #000000; color : #CCC;">
-<center><a target="_top" href="http://deambulatorymatrix.blogspot.ca/p/projects.html">(all projects)</a></center>
-<script type="text/javascript" src="http://dl.dropboxusercontent.com/u/2330215/blog/scripts/projects.js"></script>
+<center><a target="_top" href="https://deambulatorymatrix.blogspot.ca/p/projects.html">(all projects)</a></center>
+<script type="text/javascript" src="https://raptorofaxys.github.io/scripts/projects.js"></script>
 <script type="text/javascript">
   WriteProjects(false, false, 100, 60, 30, 30);
 </script>
