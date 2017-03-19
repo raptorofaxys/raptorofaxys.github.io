@@ -1,4 +1,4 @@
-// Currently hosted at <script src="https://googledrive.com/host/0B2BMZAi6YqSmRnBPX0dvYURXcFU"></script>
+// Currently hosted on GitHub at https://raptorofaxys.github.io/scripts/projects.js
 var projects =
 [
     {
