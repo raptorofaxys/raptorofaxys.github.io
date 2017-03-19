@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Module>
+  <ModulePrefs title="Projects" author="fhamel@gmail.com" author_email="fhamel@gmail.com"/>
+  <Content type="html">
+    <![CDATA[
+<body style="background-color : #000000; color : #CCC;">
+<center><a target="_top" href="http://deambulatorymatrix.blogspot.ca/p/projects.html">(all projects)</a></center>
+<script type="text/javascript" src="http://dl.dropboxusercontent.com/u/2330215/blog/scripts/projects.js"></script>
+<script type="text/javascript">
+  WriteProjects(false, false, 100, 60, 30, 30);
+</script>
+</body>
+]]>
+  </Content>
+</Module>
