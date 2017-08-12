@@ -1,7 +1,9 @@
+<body style="background-color : #000000; color : #CCC;">
+<center><a target="_top" href="https://deambulatorymatrix.blogspot.ca/p/projects.html">(all projects)</a></center>
+<script type="text/javascript">
 // Currently hosted on GitHub at https://raptorofaxys.github.io/scripts/projects.js
-// DEPRECATED: use testHtmlProjectGadget.html instead for latest version of the code which is continuously re-encoded
-// and re-inserted directly into the HTML template of the blog.
-var projects = [
+var projects =
+[
     {
         "title": "FT Tiny Trainer",
         "date": new Date(2015, 05, 20),
@@ -361,7 +363,8 @@ var projects = [
     },
 */
 
-var periods = [
+var periods =
+[
     {
         "name": "Projects completed while I was a teenager in high school or CEGEP (-1999)",
         "start": new Date(1980, 10, 16),
@@ -381,7 +384,8 @@ projects.sort(function(a, b) { return b.date - a.date; });
 
 //JSON.stringify(json, undefined, 2);
 
-function SlotProjectsIntoPeriods() {
+function SlotProjectsIntoPeriods()
+{
     // This works for periods too since we only store the start dates.
     periods.sort(function(a, b) { return b.start - a.start; });
 
@@ -404,7 +408,8 @@ function SlotProjectsIntoPeriods() {
     }
 }
 
-function WriteProjects(writePeriods, writeNames, tableWidth, imageWidth, sinCenter, sinAmplitude) {
+function WriteProjects(url, writePeriods, writeNames, tableWidth, imageWidth, sinCenter, sinAmplitude)
+{
     SlotProjectsIntoPeriods();
 
     sinCenter = (typeof sinCenter !== 'undefined') ? sinCenter : 50;
@@ -427,7 +432,13 @@ function WriteProjects(writePeriods, writeNames, tableWidth, imageWidth, sinCent
             sineParam += 0.8;
             var project = periodProjects[projectIndex];
             var colWidth = Math.round(sinCenter + Math.sin(sineParam) * sinAmplitude);
-            document.write("<table border=\"0\" width=\"" + tableWidth + "%\"><col width=\"" + colWidth + "%\"/> <col/>");
+			var style = "";
+			if (url == project.url)
+			{
+				style = "style=\"background-color:#70C1DB;\"";
+			}
+			
+            document.write("<table border=\"0\" " + style + " width=\"" + tableWidth + "%\"><col width=\"" + colWidth + "%\"/> <col/>");
             document.write("<tr>");
             document.write("<td>");
             if (writeNames)
@@ -444,23 +455,28 @@ function WriteProjects(writePeriods, writeNames, tableWidth, imageWidth, sinCent
     }
 }
 
-function MakeAnchor(text, url) {
+function MakeAnchor(text, url)
+{
 	return "<a target=\"_top\" href=\"" + url + "\">" + text + "</a>";
 }
 
-function GetTextAnchorForProjectFooterLink(project) {
+function GetTextAnchorForProjectFooterLink(project)
+{
 	return "<a target=\"_top\" href=\"" + project.url + "\">" + project.title + "</a>";
 }
 
-function GetImageAnchorForProjectFooterLink(project) {
+function GetImageAnchorForProjectFooterLink(project)
+{
 	return "<a target=\"_top\" href=\"" + project.url + "\"><img border=\"0\" src=\"" + project.thumb + "\" width=\"75%\"/></a>";
 }
 
-function MakeCenteredMonospaceTableCell(text) {
+function MakeCenteredMonospaceTableCell(text)
+{
 	return "<td><center><span style=\"font-family: 'Courier New', Courier, monospace;\">" + text + "</center></td>";
 }
 
-function ProjectPrevNext(pageUrl) {
+function ProjectPrevNext(pageUrl)
+{
 	//data.lastIndexOf(str, 0) === 0
 	var thisProjectIndex = -1;
 	urls = projects.map(function(p) { return p.url; });
@@ -492,3 +508,8 @@ function ProjectPrevNext(pageUrl) {
 		document.write("</table>");
 	}
 }
+</script>
+<script type="text/javascript">
+  WriteProjects("https://deambulatorymatrix.blogspot.ca/2013/12/giant-origami-crane-halloween-costume.html", false, false, 100, 200, 30, 30);
+</script>
+</body>
